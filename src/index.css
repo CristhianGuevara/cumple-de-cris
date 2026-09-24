@@ -1,13 +1,13 @@
 :root {
-  --bg: #120318;
-  --bg-alt: #1a0b2e;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface-border: rgba(255, 255, 255, 0.12);
-  --text: #f6f1ff;
-  --text-dim: rgba(246, 241, 255, 0.68);
-  --accent-a: #ff5da2;
-  --accent-b: #ffb703;
-  --accent-c: #7c5cff;
+  --bg: #050806;
+  --bg-alt: #0a1510;
+  --surface: rgba(180, 255, 220, 0.05);
+  --surface-border: rgba(16, 185, 129, 0.18);
+  --text: #eefbf3;
+  --text-dim: rgba(238, 251, 243, 0.66);
+  --accent-a: #10b981;
+  --accent-b: #d4af37;
+  --accent-c: #064e3b;
   color-scheme: dark;
 }
 
