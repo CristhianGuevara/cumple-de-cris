@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import foto1 from './assets/gallery/foto1.jpeg'
+import foto2 from './assets/gallery/foto2.jpeg'
+import foto3 from './assets/gallery/foto3.jpeg'
 
 // ---- Datos del evento (edita aquí cuando tengas la info definitiva) ----
 const EVENT = {
@@ -32,6 +35,8 @@ const SOCIAL_LINKS = [
   { label: 'WhatsApp', href: '#' },
   { label: 'Facebook', href: '#' },
 ]
+
+const GALLERY_PHOTOS = [foto1, foto2, foto3]
 
 function useCountdown(targetIso) {
   const [remaining, setRemaining] = useState(() => getDiff(targetIso))
@@ -210,12 +215,11 @@ function App() {
           <div className="section__head">
             <p className="section__eyebrow">Galería</p>
             <h2>Momentos para recordar</h2>
-            <p className="section__hint">Placeholder — sustituye estos bloques por tus fotos favoritas.</p>
           </div>
           <div className="gallery">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="gallery__tile">
-                <span>📷</span>
+            {GALLERY_PHOTOS.map((src, i) => (
+              <div key={src} className="gallery__tile gallery__tile--photo">
+                <img src={src} alt={`Foto ${i + 1} de ${EVENT.title}`} loading="lazy" />
               </div>
             ))}
           </div>
